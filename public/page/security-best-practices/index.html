@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta http-equiv='Content-Security-Policy' content="script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'">
+    
+
+<link rel="stylesheet" href="/css/style.css" media="screen">
+
+    <title>Security Best Practices 🔒</title>
+
+<meta name="description" content="Improve code health of your web page following these best practices. Prevent security vulnerabilities">
+
+
+
+<link rel="canonical" href="http://localhost:1313/page/security-best-practices/" />
+
+
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/page/security-best-practices/" />
+<link rel="alternate" hreflang="x-default" href="http://localhost:1313/page/security-best-practices/" />
+
+
+
+
+<meta property="og:title" content="Security Best Practices 🔒" />
+<meta property="og:description" content="Improve code health of your web page following these best practices. Prevent security vulnerabilities" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/page/security-best-practices/" />
+  <meta property="article:section" content="page" />
+  
+  
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Security Best Practices 🔒"/>
+<meta name="twitter:description" content="Improve code health of your web page following these best practices. Prevent security vulnerabilities"/>
+
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Security Best Practices 🔒",
+  "datePublished": "0001-01-01T00:00:00+00:00",
+  "dateModified": "0001-01-01T00:00:00+00:00",
+  "mainEntityOfPage": "http://localhost:1313/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site"
+  },
+  "wordcount" :  265 ,
+  "description": "Improve code health of your web page following these best practices. Prevent security vulnerabilities",
+  "keywords": ["security best practices","external links","does not use https","links to cross-origin destinations are unsafe","includes front-end JavaScript libraries with known security vulnerabilities","ensure CSP is effective against XSS attacks","Content Security Policy","csp"]
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/favicon.svg">
+<link rel="icon" type="image/png" href="http://localhost:1313/favicon.png">
+
+</head>
+
+<body class="page single d-flex flex-column min-vh-100"><header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="/">
+        
+        My New Hugo Site
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="menu-main navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+        
+        
+        
+
+      </div>
+    </div>
+  </nav>
+</header><div id="content">
+        
+
+<div class="container py-3">
+  <h1 id="security-best-practices">Security Best Practices</h1>
+<p>Improve code health of your web page following these best practices.</p>
+<h2 id="use-https">Use HTTPS</h2>
+<p>All websites should be protected with HTTPS, even ones that don&rsquo;t handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your site and your users.</p>
+<h2 id="external-links">External Links</h2>
+<p>When you link to a page on another site using the target=&quot;_blank&quot; attribute, you can expose your site to performance and security issues:</p>
+<ul>
+<li>
+<p>The other page may run on the same process as your page. If the other page is running a lot of JavaScript, your page&rsquo;s performance may suffer.</p>
+</li>
+<li>
+<p>The other page can access your window object with the window.opener property. This may allow the other page to redirect your page to a malicious URL.</p>
+</li>
+</ul>
+<p>Adding <code>rel=&quot;noopener&quot;</code> or <code>rel=&quot;noreferrer&quot;</code> to your <code>target=&quot;_blank&quot;</code> links avoids these issues.</p>
+<hr>
+<p>All external links will have <code>target=&quot;_blank&quot;</code> and <code>rel=“noopener nofollow”</code> attribute.</p>
+<ul>
+<li>
+<p><a href="https://salvus.site" target="_blank" rel="noopener">Salvus.Site</a></p>
+</li>
+<li>
+<p><a href="https://discourse.gohugo.io/t/render-link-html-help-need/30006/3" target="_blank" rel="noopener">Render-link.html help need</a></p>
+</li>
+</ul>
+<p>Internal link:</p>
+<ul>
+<li><a href="/blog/">Blog</a></li>
+</ul>
+<h2 id="checks-your-javascript-libraries-for-security-vulnerabilities">Checks your JavaScript libraries for security vulnerabilities</h2>
+<p>Intruders have automated web crawlers that can scan your site for known security vulnerabilities. When the web crawler detects a vulnerability, it alerts the intruder. From there, the intruder just needs to figure out how to exploit the vulnerability on your site.</p>
+<p>To detect vulnerable libraries check <a href="https://snyk.io/vuln?packageManager=all" target="_blank" rel="noopener">snyk&rsquo;s Vulnerability DB</a>.</p>
+<h2 id="configure-content-security-policy-csp">Configure Content Security Policy (CSP)</h2>
+<p>A Content Security Policy (CSP) helps to ensure any content loaded in the page is trusted by the site owner. CSPs mitigate cross-site scripting (XSS) attacks because they can block unsafe scripts injected by attackers. However, the CSP can easily be bypassed if it is not strict enough.</p>
+
+</div>
+
+
+    </div>
+    <footer class="py-3 mt-auto bg-light">
+  <div class="container py-1 my-1">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <p class="col-md mb-0 text-muted"></p>
+      <ul class="nav col-md-auto justify-content-end">
+        </ul>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+    <script src="/js/main.js" defer></script>
+  
+
+</body>
+</html>

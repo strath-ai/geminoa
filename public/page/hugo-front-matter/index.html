@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta http-equiv='Content-Security-Policy' content="script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'">
+    
+
+<link rel="stylesheet" href="/css/style.css" media="screen">
+
+    <title>Hugo Front Matter 🦉</title>
+
+<meta name="description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files.">
+
+
+
+<link rel="canonical" href="http://localhost:1313/page/hugo-front-matter/" />
+
+
+<link rel="alternate" hreflang="en-us" href="http://localhost:1313/page/hugo-front-matter/" />
+<link rel="alternate" hreflang="x-default" href="http://localhost:1313/page/hugo-front-matter/" />
+
+
+
+
+<meta property="og:title" content="Hugo Front Matter 🦉" />
+<meta property="og:description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/page/hugo-front-matter/" />
+    <meta property="og:image" content="http://localhost:1313/page/hugo-front-matter/hugo-front-matter.jpg" />
+      
+    <meta property="og:image" content="http://localhost:1313/page/hugo-front-matter/hugo-logo.svg" />
+      
+  <meta property="article:section" content="page" />
+  
+  
+
+
+
+
+
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="http://localhost:1313/page/hugo-front-matter/hugo-front-matter.jpg"/>
+  <meta name="twitter:title" content="Hugo Front Matter 🦉"/>
+<meta name="twitter:description" content="Hugo allows you to add front matter in yaml, toml, or json to your content files."/>
+
+
+
+
+
+
+  
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hugo Front Matter 🦉",
+  "image": "http://localhost:1313/page/hugo-front-matter/hugo-front-matter.jpg",
+  "datePublished": "0001-01-01T00:00:00+00:00",
+  "dateModified": "0001-01-01T00:00:00+00:00",
+  "mainEntityOfPage": "http://localhost:1313/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site"
+  },
+  "wordcount" :  242 ,
+  "description": "Hugo allows you to add front matter in yaml, toml, or json to your content files.",
+  "keywords": ["Hugo Front Matter","hugo","front matter","draft post","front matter variables"]
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/favicon.svg">
+<link rel="icon" type="image/png" href="http://localhost:1313/favicon.png">
+
+</head>
+
+<body class="page single d-flex flex-column min-vh-100"><header class="main-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="/">
+        
+        My New Hugo Site
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="menu-main navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+        
+        
+        
+
+      </div>
+    </div>
+  </nav>
+</header><div id="content">
+        
+
+<div class="container py-3">
+  <h1 id="hugo-front-matter">Hugo Front Matter</h1>
+<p>Hugo allows you to add front matter in yaml, toml, or json to your content files.</p>
+<p><strong>Front matter</strong> allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file—and is one of the many features that gives Hugo its strength.</p>
+<p><img src="hugo-front-matter.jpg" alt="Banner">
+{ .img-fluid }</p>
+<h2 id="front-matter-variables">Front Matter Variables</h2>
+<p>There are a few <a href="https://gohugo.io/content-management/front-matter/#predefined" target="_blank" rel="noopener">predefined variables</a> that Hugo is aware of. See <a href="https://gohugo.io/variables/page/" target="_blank" rel="noopener">Page Variables</a> for how to call many of these predefined variables in your templates.</p>
+<p>You can add fields to your front matter arbitrarily to meet your needs. These user-defined key-values are placed into a single <code>.Params</code> variable for use in your templates.</p>
+<p>Any node or section can pass down to descendants a set of Front Matter values as long as defined underneath the reserved <code>cascade</code> Front Matter key.</p>
+<h3 id="order-content-through-front-matter">Order Content Through Front Matter</h3>
+<p>You can assign content-specific <code>weight</code> in the front matter of your content. These values are especially useful for ordering in list views. You can use <code>weight</code> for ordering of content and the convention of <a href="https://gohugo.io/content-management/taxonomies/" target="_blank" rel="noopener"><!-- raw HTML omitted -->_weight</a> for ordering content within a taxonomy. See <a href="https://gohugo.io/templates/lists/#order-content" target="_blank" rel="noopener">Ordering and Grouping Hugo Lists</a> to see how <code>weight</code> can be used to organize your content in list views.</p>
+<h3 id="draft-post">Draft Post</h3>
+<p>if <code>true</code>, the content will not be rendered unless the <code>--buildDrafts</code> flag is passed to the <code>hugo</code> command.</p>
+<p><strong>Note</strong>: This page has the <code>draft</code> front matter variable with value <code>true</code>, so it will not be rendered in production.</p>
+
+</div>
+
+
+    </div>
+    <footer class="py-3 mt-auto bg-light">
+  <div class="container py-1 my-1">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <p class="col-md mb-0 text-muted"></p>
+      <ul class="nav col-md-auto justify-content-end">
+        </ul>
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+    <script src="/js/main.js" defer></script>
+  
+
+</body>
+</html>
