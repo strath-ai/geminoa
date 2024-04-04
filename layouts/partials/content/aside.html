@@ -4,14 +4,14 @@
 
 	<div class="space-y-6">
 
-		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
+		<h2 class="font-bold text-xl mb-8">Recent Posts</h2>
 
-		{{ range where .Site.RegularPages "Type" "posts" | first 5}}
+		{{ range where .Site.RegularPages "Type" "blog" | first 5}}
 
-			{{- partial "content/list-post.html" . -}}
+		{{- partial "content/list-post.html" . -}}
 
 		{{ end }}
-		
+
 	</div>
 
 </div>
