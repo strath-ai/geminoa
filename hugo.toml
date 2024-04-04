@@ -1,6 +1,7 @@
 baseURL = 'https://geminoa.strath.ai/'
 languageCode = 'en-gb'
-title = 'Strathclyde GEMINOA Project'
+title = 'GEMINOA'
+pluralizeListTitles = false
 
 [[menus.main]]
 name = 'Home'
@@ -8,14 +9,20 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Blog'
+pageRef = '/blog'
 weight = 20
 
+# [[menus.main]]
+# name = 'Tags'
+# pageRef = '/tags'
+# weight = 30
+
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'About'
+pageRef = '/about'
 weight = 30
+
 
 [module]
   [module.hugoVersion]

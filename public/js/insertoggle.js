@@ -27,17 +27,5 @@
         });
       });
     });
-    document.addEventListener("click", function(event) {
-      const targetElements = Array.from(document.querySelectorAll(".open"));
-      const clickedOutsideAllTargets = targetElements.every((element) => {
-        return !element.contains(event.target) && !event.target.closest(".toggle-button");
-      });
-      if (clickedOutsideAllTargets) {
-        targetElements.forEach((element) => {
-          element.classList.remove("open");
-          element.classList.add("close");
-        });
-      }
-    });
   })();
 })();

@@ -34,18 +34,18 @@
     });
 
     // Add event listener to the document to close elements when a click occurs outside of open elements
-    document.addEventListener("click", function (event) {
-        const targetElements = Array.from(document.querySelectorAll(".open"));
-        const clickedOutsideAllTargets = targetElements.every((element) => {
-            return !element.contains(event.target) && !event.target.closest(".toggle-button");
-        });
+    // document.addEventListener("click", function (event) {
+    //     const targetElements = Array.from(document.querySelectorAll(".open"));
+    //     const clickedOutsideAllTargets = targetElements.every((element) => {
+    //         return !element.contains(event.target) && !event.target.closest(".toggle-button");
+    //     });
 
-        if (clickedOutsideAllTargets) {
-            targetElements.forEach((element) => {
-                element.classList.remove("open"); // Close open elements
-                element.classList.add("close"); // Hide elements
-            });
-        }
-    });
+    //     if (clickedOutsideAllTargets) {
+    //         targetElements.forEach((element) => {
+    //             element.classList.remove("open"); // Close open elements
+    //             element.classList.add("close"); // Hide elements
+    //         });
+    //     }
+    // });
 
 })();
