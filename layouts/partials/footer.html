@@ -5,7 +5,8 @@
     <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
 
       <a class="flex items-center group" href="{{ .Site.BaseURL }}">
-        <img class="image-fluid w-12 h-12 rounded-full overflow-hidden group-hover:animate-spin" src="logo.jpg">
+        <img class="image-fluid w-12 h-12 rounded-full overflow-hidden group-hover:animate-spin" src={{ "logo.jpg" |
+          absURL }}>
         <span class="text-2xl font-semibold uppercase px-4">{{ .Site.Title }}</span>
       </a>
 
