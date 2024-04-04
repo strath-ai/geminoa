@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
 <head>
   {{ partial "head.html" . }}
 </head>
+
 <body>
   <header class="py-6 border-b">
     {{- partial "header.html" . -}}
@@ -15,4 +18,5 @@
   </footer>
   {{- partialCached "footer/js.html" . }}
 </body>
+
 </html>
