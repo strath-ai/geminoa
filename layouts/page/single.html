@@ -2,14 +2,11 @@
 
 <div class="py-14">
 
+	{{ if .Params.image }}
 	<div class="mb-14">	
-
-		{{ if .Params.image }}
 		<img class="rounded-3xl" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-		{{ end }}
-
 	</div>
-
+	{{ end }}
 
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
