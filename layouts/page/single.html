@@ -4,7 +4,9 @@
 
 	<div class="mb-14">	
 
+		{{ if .Params.image }}
 		<img class="rounded-3xl" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+		{{ end }}
 
 	</div>
 
