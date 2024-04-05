@@ -23,6 +23,11 @@ name = 'About'
 pageRef = '/about'
 weight = 30
 
+[[menus.main]]
+name = 'People'
+pageRef = '/people'
+weight = 40
+
 
 [module]
   [module.hugoVersion]
