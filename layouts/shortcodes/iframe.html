@@ -1,0 +1,8 @@
+<!-- iframe shortcode -->
+{{- $width := or (.Get "width") 300 -}}
+{{- $height := or (.Get "height") 200 -}}
+<iframe 
+	src={{ .Get "src" }} 
+	width={{ $width }}
+	height={{ $height }}
+></iframe>
