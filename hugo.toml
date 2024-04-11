@@ -30,7 +30,22 @@ weight = 40
 
 
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
 
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+[params]
+math = true
+
+
+[taxonomies]
+author = "authors"
