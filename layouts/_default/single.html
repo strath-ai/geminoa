@@ -97,12 +97,13 @@
 
 
 
+      {{ with .Params.authors }}
       <div id="author-box" class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
 
 
         <h2 class="text-xl font-bold my-4">Writter by:</h2>
 
-        {{ with .Params.authors }}
+
         {{ range $ind,$val := . }}
         {{$author := $val | urlize }}
         {{- with $.Site.GetPage "authors" $author}}
@@ -111,7 +112,6 @@
         <h2 class="text-xl font-bold my-4">{{ .Params.name }}</h2>
         <p class="mb-4">{{ .Params.bio }}</p>
         {{ end -}}
-        {{ end }}
         {{ end }}
 
         <!--
@@ -152,10 +152,11 @@
       -->
 
       </div>
+      {{ end }}
 
 
 
-
+      {{ with .Site.RegularPages.Related . }}
       <div id="related-post" class="">
 
         <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2>
@@ -176,7 +177,7 @@
 
         {{- end }}
       </div>
-
+      {{ end }}
     </footer>
 
   </article>
