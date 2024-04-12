@@ -5,7 +5,7 @@ slug: /improving-environmental-decision-making-through-data-geminoa/
 description: GEMINOA multidisciplinary project for outdoor and indoor air quality.
 image: images/Shutterstock_2182254607-1536x864.jpg
 caption: Glsagow City Chambers
-authors: ["Jack Williamson", "Allison Catalano", "Grant Allan", "Craig Michie", "Tim Sharp", "Christos Tachtatzis", "Alejandro Moreno-Rangel", "Sandeep Kodoli"]
+authors: ["Jack Williamson", "Allison Catalano", "Grant Allan", "Craig Michie", "Tim Sharp"]
 draft: true
 ---
 
